@@ -5,6 +5,9 @@ LABEL maintainer="Hari Shankar <harishankarm04@gmail.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Kolkata
 
+# Defining dynamic linker path
+ENV LD_LIBRARY_PATH=/usr/local/lib
+
 # Arguments
 ARG USERNAME=embedded
 
