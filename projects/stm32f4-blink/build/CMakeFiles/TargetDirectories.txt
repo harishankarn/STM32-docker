@@ -1,0 +1,6 @@
+/home/embedded/projects/stm32f4-blink/build/CMakeFiles/edit_cache.dir
+/home/embedded/projects/stm32f4-blink/build/CMakeFiles/rebuild_cache.dir
+/home/embedded/projects/stm32f4-blink/build/CMakeFiles/stm32f4-blink.dir
+/home/embedded/projects/stm32f4-blink/build/CMakeFiles/stm32f4-blink.hex.dir
+/home/embedded/projects/stm32f4-blink/build/CMakeFiles/stm32f4-blink.bin.dir
+/home/embedded/projects/stm32f4-blink/build/CMakeFiles/deploy.dir

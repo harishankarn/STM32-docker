@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+f1f6f303598da13f57d41fb2c5b4bf55 CMakeFiles/deploy
+b22d8cc0a55fe3a45e8dd39548ece0bf CMakeFiles/stm32f4-blink.bin
+27890f7f64906ac553b29f6fe8307a55 CMakeFiles/stm32f4-blink.hex
