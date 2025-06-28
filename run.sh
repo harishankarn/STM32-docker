@@ -51,7 +51,7 @@ mkdir -p "$HOST_PROJECT_PATH"
 # === Run Docker with full access ===
 docker run -it --rm \
   --privileged \
-  --device /dev/bus/usb \
+  -v /dev/bus/usb:/dev/bus/usb \
   --network host \
   -v "$HOST_PROJECT_PATH:$DOCKER_PROJECT_PATH" \
   -e LOCAL_USER_ID=$(id -u) \
