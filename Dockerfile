@@ -85,6 +85,9 @@ RUN groupadd --gid 1000 $USERNAME && \
     useradd -ms /bin/bash --uid 1000 --gid 1000 $USERNAME && \
     echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
+#OpenOCD talks to the chip through USB, so we need grant our account access to the FTDI. 
+RUN cp /usr/local/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d/60-openocd.rules
+
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
