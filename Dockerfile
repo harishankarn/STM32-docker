@@ -33,7 +33,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
     ninja-build \
-    ca-certificates
+    ca-certificates \
+    udev
 
 # OPENOCD support packages
 RUN apt-get install -y --no-install-recommends \ 
