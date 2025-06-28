@@ -31,7 +31,6 @@ while [[ $# -gt 0 ]]; do
       echo "Defaults:"
       echo "  USERNAME = $USERNAME"
       echo "  PATH     = ./$INPUT_PATH"
-
       exit 1
       ;;
   esac
@@ -40,7 +39,7 @@ done
 # === Resolve full absolute path first ===
 HOST_PROJECT_PATH="$(realpath "$INPUT_PATH")"
 
-# === Extract just folder name 
+# === Extract just folder name ===
 PROJECT_FOLDER_NAME="$(basename "$HOST_PROJECT_PATH")"
 
 # === Final path inside Docker container ===
@@ -49,8 +48,11 @@ DOCKER_PROJECT_PATH="/home/$USERNAME/$PROJECT_FOLDER_NAME"
 # === Ensure host path exists ===
 mkdir -p "$HOST_PROJECT_PATH"
 
-# === Docker run to enter the docker ===
+# === Run Docker with full access ===
 docker run -it --rm \
+  --privileged \
+  --device /dev/bus/usb \
+  --network host \
   -v "$HOST_PROJECT_PATH:$DOCKER_PROJECT_PATH" \
   -e LOCAL_USER_ID=$(id -u) \
-  stm32-compiler
+  stm32-compiler /bin/bash
